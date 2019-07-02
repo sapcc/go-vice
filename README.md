@@ -133,3 +133,20 @@ certificate := renewal.Certificate
 // Otherwise, you can approve it with the returned transactionID
 tid := renewal.TransactionID
 ```
+
+### Revoking a Certificate
+
+Revoking a valid certificate. Given you still know the
+serial number of the certificate. 
+In addition you have to provide a reason and a password, if it was set for the
+certificate.
+
+```
+revokement, err := viceClient.Certificates.Revoke(
+  context.Background(),
+  &vice.RevokeRequest{
+    CertSerial: "04be916823d7asd1908acc9f982a4ccf12",
+    Reason:     vice.CertRevokementType.Unspecified,
+    Challenge:  "password",
+  })
+```
