@@ -21,7 +21,7 @@ import (
 
 const (
 	libraryVersion = "1.0.0"
-	defaultBaseURL = "https://certmanager-webservices.websecurity.symantec.com/"
+	defaultBaseURL = "https://certmanager-webservices.websecurity.digicert.com/"
 	userAgent      = "go-vice/" + libraryVersion
 	mediaType      = "application/x-www-form-urlencoded"
 )
